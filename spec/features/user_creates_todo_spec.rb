@@ -3,7 +3,7 @@ require "rails_helper"
 feature "User creates a new Todo" do
 
 	scenario "successfully" do
-		sign_in
+		sign_in_as "person@email.com"
 
 		click_on "New Todo"
 		fill_in "Title", with: "Buying Milk"
