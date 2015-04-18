@@ -11,7 +11,7 @@ module Features
 	end
 
 	def display_completed_todo todo_title
-		have_css ".todos li,completed", text: todo_title
+		have_css ".todos li.completed", text: todo_title
 	end
 
 end
