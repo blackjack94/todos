@@ -21,6 +21,7 @@ describe Todo, "#complete!" do
 		todo = Todo.create(completed_at: nil)
 
 		todo.complete!
+		todo.reload
 
 		expect(todo).to be_completed
 	end
@@ -31,6 +32,7 @@ describe Todo, "#incomplete!" do
 		todo = Todo.create(completed_at: Time.current)
 
 		todo.incomplete!
+		todo.reload
 
 		expect(todo).not_to be_completed
 	end
