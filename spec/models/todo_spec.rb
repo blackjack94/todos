@@ -15,3 +15,13 @@ describe Todo, "#completed?"  do
 	end
 
 end
+
+describe Todo, "#complete!" do
+	it "should marks a todo as completed" do
+		todo = Todo.create(completed_at: nil)
+
+		todo.complete!
+
+		expect(todo).to be_completed
+	end
+end
